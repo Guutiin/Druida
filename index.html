@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha: A Druida</title>
+    <style>
+        /* Estilo Geral (Visual de Pergaminho) */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4e4bc;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fffbf0;
+            border: 1px solid #d4c5a3;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            padding: 40px;
+            border-radius: 5px;
+        }
+
+        /* Cabeçalho e Imagem */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #27ae60; /* Verde Natureza */
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: #1e8449; /* Verde Escuro */
+            margin: 10px 0 5px 0;
+            font-size: 2.5em;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .char-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 4px solid #1e8449;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            margin-top: 10px;
+        }
+
+        /* Tabela de Atributos */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .stat-box {
+            background-color: #e8dcc5;
+            border: 1px solid #bba;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .stat-val {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Seções (Ataques, Habilidades) */
+        .section-title {
+            background-color: #1e8449;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1.2em;
+            margin-top: 30px;
+            border-radius: 3px;
+        }
+        .attack-card {
+            background-color: #fff;
+            border-left: 5px solid #7f8c8d; /* Cinza Lâmina */
+            padding: 10px 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .wild-shape-card {
+            background-color: #eafaf1; /* Fundo verde claro */
+            border-left: 5px solid #d35400; /* Laranja (Animal) */
+            padding: 10px 15px;
+            margin: 10px 0;
+            border: 1px solid #d5dbdb;
+        }
+        strong { color: #8b0000; }
+
+        /* Rodapé de Impressão */
+        @media print {
+            body { background-color: white; }
+            .container { box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="Druida.jpg" alt="A Druida Humana" class="char-img">
+        
+        <h1>A Druida</h1>
+        <div class="quote">"A civilização é temporária. As raízes e as garras são eternas."</div>
+        <p><strong>Raça:</strong> Humana | <strong>Estilo:</strong> Versátil (Magia e Transformação)</p>
+    </header>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <span class="stat-label">Vida (PV)</span>
+            <span class="stat-val" style="color: #c0392b;">25</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Defesa</span>
+            <span class="stat-val" style="color: #2980b9;">13</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Força</span>
+            <span class="stat-val">+2</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Constituição</span>
+            <span class="stat-val">+2</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Mente</span>
+            <span class="stat-val">+2</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Destreza</span>
+            <span class="stat-val">+1</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">⚔️ Ataque Humano</h2>
+    
+    <div class="attack-card">
+        <h3>🌙 Foice de Mão (Corpo a Corpo)</h3>
+        <p>Uma lâmina curva usada para colher ervas... e pescoços.</p>
+        <p><strong>Acerto:</strong> 1d20 + 2 <br> <strong>Dano:</strong> 1d6 + 2 (Cortante)</p>
+    </div>
+
+    <h2 class="section-title">🐻 Forma Selvagem (2x ao Dia)</h2>
+    <p><em>Você pode usar uma ação para virar um animal. Enquanto transformado, você não pode falar nem lançar magias, mas ganha as habilidades abaixo. Se seus PVs de animal acabarem, você volta à forma humana.</em></p>
+
+    <div class="wild-shape-card">
+        <h3>🐺 Opção A: O Lobo (Dano e Controle)</h3>
+        <p>Rápido e mortal. Use para caçar inimigos.</p>
+        <ul>
+            <li><strong>Mordida:</strong> 1d20 + 4 para acertar. Dano: <strong>2d6 + 2</strong>.</li>
+            <li><strong>Derrubar:</strong> Se acertar o ataque, o inimigo deve passar num teste de Força ou cai no chão (dando vantagem para seus amigos).</li>
+        </ul>
+    </div>
+
+    <div class="wild-shape-card" style="border-left-color: #8e44ad;">
+        <h3>🐻 Opção B: O Urso (Tanque)</h3>
+        <p>Resistente e forte. Use quando precisar aguentar pancada.</p>
+        <ul>
+            <li><strong>Garras:</strong> 1d20 + 4 para acertar. Dano: <strong>1d8 + 4</strong>.</li>
+            <li><strong>Pele Grossa:</strong> Enquanto for urso, você ganha <strong>+10 PV Temporários</strong> (uma "segunda barra de vida").</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">🎒 Equipamento</h2>
+    <ul>
+        <li>Armadura de Couro e Peles (Defesa natural)</li>
+        <li>Foice de Mão</li>
+        <li>Foco Druídico (Um ramo de visco ou cajado)</li>
+        <li>Kit de Ervas Medicinais</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
